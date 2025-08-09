@@ -104,4 +104,10 @@ pub fn parsecargo(project_dir: PathBuf) -> std::io::Result<ProjectDoc> {
         .collect();
 
     // implement types and functions
+    Ok( ProjectDoc{
+        metadata: metadata,
+        dependencies: dependencies,
+        types: HashMap::new(),
+        functions: HashMap::new() 
+    })
 }
